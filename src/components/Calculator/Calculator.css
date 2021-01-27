@@ -1,0 +1,24 @@
+.display {
+    height: 30vh;
+    background: linear-gradient(52deg, #DF4992 0%, #F7B12F 100%);
+}
+
+.column {
+    display: flex;
+    height: 14vh;
+}
+
+.values {
+    text-align: right;
+    margin: 2em 2em;
+}
+
+.values .primary {
+    font-size: 38pt;
+    color: #FEF7F5;
+}
+.values .secondary {
+    font-size: 16pt;
+    color: rgba(253, 247, 245, 0.5);
+    margin-top: 2em;
+}

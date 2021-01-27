@@ -1,0 +1,19 @@
+.CalculatorButton {
+    width: 25%;
+    height: 100%;
+    border: none;
+    font-size: 18pt;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.CalculatorButton.clear {
+    color: #E67D91;
+}
+
+.CalculatorButton.operator {
+    background-color: #EAEAEA
+}
+
+.CalculatorButton.calc {
+    background: linear-gradient(52deg, #DF4992 0%, #F7B12F 100%);
+}
