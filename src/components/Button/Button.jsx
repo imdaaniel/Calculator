@@ -4,31 +4,29 @@ import './Button.css';
 
 class Button extends Component {
     prepare() {
-        let params = {};
+        let myProps = {
+            text: '',
+            type: '',
+            click: '',
+        };
 
-        switch (this.props.type) {
-            case 'operator':
-                params.color = `CalculatorButton-operator`;
-                params.action = '';
-                break;
-            case 'calc':
-                params.color = `CalculatorButton-calc`;
-                params.action = '';
-                break;
-            default:
-                params.color = ``;
-                params.action = '';
-                break;
+        for (let prop in myProps) {
+            if (this.props[prop] != undefined) {
+                myProps[prop] = this.props[prop];
+            }
         }
 
-        return params;
+        return myProps;
     }
 
     render() {
-        // let params = this.prepare();
+        let myProps = this.prepare();
 
         return <>
-            <button className={`CalculatorButton ${this.props.type}`}>{this.props.text}</button>
+            <button
+                className={`CalculatorButton ${myProps.type}`.trim()}
+                onClick={myProps.click}
+            >{myProps.text}</button>
         </>
     }
 }
